@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="StudentManagmentSystem.Teacher.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+             <div style="background-color: #C0C0C0" class="auto-style1">
+              <%
+                    if (Session["teacher"] == null)
+            {
+                %>
+                <%
+
+            }
+            else
+            {
+                %>
+                 <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Teacher/books.aspx" Font-Bold="True" Font-Size="Larger" ForeColor="Blue">Materials</asp:HyperLink>&nbsp;&nbsp;
+                 <asp:HyperLink ID="Logout1" runat="server" NavigateUrl="~/Teacher/logout.aspx" Font-Bold="True" Font-Size="Larger" ForeColor="Blue">Logout</asp:HyperLink>&nbsp;&nbsp;
+
+                  <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Teacher/Dashboard.aspx" Font-Bold="True" Font-Size="Larger" ForeColor="Blue">Home</asp:HyperLink>&nbsp;&nbsp;
+                
+                <%
+
+            }
+
+
+
+                    %>
+             </div>
+             
+           
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+       
+    </form>
+</body>
+</html>
