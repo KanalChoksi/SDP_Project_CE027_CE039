@@ -34,10 +34,10 @@ namespace StudentManagmentSystem.Admin
             smtp.Port = 587;
             smtp.EnableSsl = true;
             smtp.UseDefaultCredentials = false;
-            NetworkCredential nc = new NetworkCredential("nsoni12482@gmail.com", "nehal_soni");
+            NetworkCredential nc = new NetworkCredential("", "");
 
             smtp.Credentials = nc;
-            MailMessage mm = new MailMessage("nsoni12482@gmail.com", email.Text);
+            MailMessage mm = new MailMessage("", email.Text);
             mm.Subject = "Faculty's Username and Password";
             mm.Body = "Username is " + fname.Text + "</br> Password is" + pwd.Text;
             mm.IsBodyHtml = true;
